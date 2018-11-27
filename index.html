@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- App's own CSS -->
-    <link href="css/styles.css" rel="stylesheet"/>
+        <!-- App's own CSS -->
+        <link href="css/styles.css" rel="stylesheet"/>
+   
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
 
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+        <!-- Get the FontAwesome Icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+        <!-- App's own JavaScript -->
+        <script src="js/test.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- App's own JavaScript -->
-    <script src="js/test.js"></script>
-
-    <title>Andrew Ghorbani</title>
+        <title>Andrew Ghorbani</title>
+  </head>
 
     <body>
 
-        <h1>Hello World!</h1>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Andrew Ghorbani</h1> 
+                <p>Aspiring Software Engineer/Developer</p> 
+            </div>
+        </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Andrew Ghorbani</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button style="font-size:24px"><a href="www.github.com/abghorba"></a><i class="fa fa-github"> GitHub</i></button>
+                    </li>
+                    <li>
+                        <button style="font-size:24px"><a href="www.linkedin.com/andrewbghorbani"></a><i class="fa fa-linkedin-square"> LinkedIn </i></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="aboutme" class="page-header">
+            <h1>About Me</h1>
+        </div>
+
+        <div id="education" class="page-header">
+            <h1>Education</h1>
+        </div>
+
+        <div id="projects" class="page-header">
+            <h1>Projects</h1>
+        </div>
+
+        <div id="experience" class="page-header">
+            <h1>Experience</h1>
+        </div>
+
+        <div id="hobbies" class="page-header">
+            <h1>Hobbies</h1>
+        </div>
+
+        <div id="contact" class="page-header">
+            <h1>Contact Me</h1>
+        </div>
 
     </body>
-
-    <footer>
-        <p><a href="www.linkedin.com/andrewbghorbani"></a></p>
-    </footer>
 </html>
