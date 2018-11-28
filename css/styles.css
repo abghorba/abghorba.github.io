@@ -3,6 +3,10 @@
 }
 
 .section-area {
-    width: 100%;
     padding: 200px;
+}
+
+.fill-section {
+    height: 100vh;
+    width: 100vw;
 }
