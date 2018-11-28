@@ -3,15 +3,28 @@ html, body {
     width: 100vw;
 }
 
+section {
+    margin: 0;
+    padding: 10px;
+}
+
+.section-container {
+    color: black;
+    background-color: white;
+    opacity: 0.45;
+}
+
+.page-header {
+    text-shadow: 2px 2px #ffffff;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
 .centered-section {
     text-align: center;
 }
 
-.section-area {
-    padding: 225px;
-}
-
 .fill-section {
-    height: 100vh;
+    height: calc(100vh - 40px);
     width: 100vw;
 }

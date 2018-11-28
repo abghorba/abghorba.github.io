@@ -48,8 +48,9 @@ $(function() {
           var hash = this.hash;
     
           // Using jQuery's animate() method to add smooth page scroll
+          $navbarHeight = $('.navbar').height()
           $('html, body').animate({
-            scrollTop: $(hash).offset().top
+            scrollTop: $(hash).offset().top - $navbarHeight,
           }, 800, function(){
     
             // Add hash (#) to URL when done scrolling (default click behavior)
