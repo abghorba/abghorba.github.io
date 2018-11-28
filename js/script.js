@@ -5,8 +5,13 @@ $(function() {
         speed: 0.2
     });
 
+    $('.skills-area').parallax({
+        imageSrc: 'img/bg5.jpg',
+        speed: 0.2
+    });
+
     $('.education-area').parallax({
-        imageSrc: 'img/uci1.png',
+        imageSrc: 'img/uci.jpg',
         speed: 0.2
     });
 
@@ -21,13 +26,13 @@ $(function() {
     });
 
     $('.hobbies-area').parallax({
-        imageSrc: 'img/bg5.jpg',
+        imageSrc: 'img/bjj.jpg',
         speed: 0.2
     });
 
-    $('.contact-area').parallax({
-        imageSrc: 'img/bg2.jpg',
-        speed: 0.2
+    // Updates the URL with appropriate hash code on scrollspy event
+    $(window).on('activate.bs.scrollspy', function (e) {
+        history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
     });
 
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
