@@ -19,23 +19,27 @@
  
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
-        <!-- App's own JavaScript -->
-        <script src="js/test.js"></script>
+
+        <!-- Parallax JavaScript -->
+        <script src="js/parallax.min.js"></script>
+
+        <!-- Parallax JavaScript -->
+        <script src="js/script.js"></script>
 
         <title>Andrew Ghorbani</title>
   </head>
 
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="10">
 
-        <div class="container">
-            <div class="jumbotron">
+        <div class="jumbotron">
+            <div class="container text-center">
+                <img src="img/profile.jpg" class="img-circle text-center" alt="Portrait" style="width:30%">
                 <h1>Andrew Ghorbani</h1> 
                 <p>Aspiring Software Engineer/Developer</p> 
             </div>
         </div>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Andrew Ghorbani</a>
@@ -57,29 +61,97 @@
             </div>
         </nav>
 
-        <div id="aboutme" class="page-header">
-            <h1>About Me</h1>
-        </div>
+        <section id="aboutme"> 
+            <div class="aboutme-area section-area"></div>
+            <div class="page-header">
+                    <h1 class="centered-section"> About Me </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+            </div>
+        </section>
 
-        <div id="education" class="page-header">
-            <h1>Education</h1>
-        </div>
+        <section id="education">
+            <div class="education-area section-area"></div>
+            <div class="page-header">
+                <h1 class="centered-section"> Education </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+            </div>
+        </section>
 
-        <div id="projects" class="page-header">
-            <h1>Projects</h1>
-        </div>
+        <section id="projects">
+            <div class="projects-area section-area"></div>
+            <div>
+                <h1 class="centered-section"> Projects </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+            </div>
+        </section>
 
-        <div id="experience" class="page-header">
-            <h1>Experience</h1>
-        </div>
+        <section id="experience">
+            <div class="experience-area section-area"></div>
+            <div>
+                <h1 class="centered-section"> Experience </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+            </div>
+        </section>
 
-        <div id="hobbies" class="page-header">
-            <h1>Hobbies</h1>
-        </div>
+        <section id="hobbies">
+            <div class="hobbies-area section-area"></div>
+            <div>
+                <h1 class="centered-section"> Hobbies </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+            </div>
+        </section>
 
-        <div id="contact" class="page-header">
-            <h1>Contact Me</h1>
-        </div>
+        <section id="contact">
+            <div class="contact-area section-area"></div>
+            <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center inner">
+                            <div class="contact-content">
+                                <div class="row">                            
+                                    <div class="col-sm-12">
+                                        <h1 class="centered-section"> Contact Me </h1>
+                                        <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id <br>
+                                            felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. <br>
+                                            Etiam a mi quis arcu varius condimentum.</p>
+                                        </div>                            
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form action="#" method="post" class="contact-form">
+                                    <div class="col-sm-6 contact-form-left">
+                                        <div class="form-group">
+                                            <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+                                                <input type="email" name="email" class="form-control" id="mail" placeholder="Email">
+                                            <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 contact-form-right">
+                                        <div class="form-group">
+                                            <textarea name="message" rows="6" class="form-control" id="comment" placeholder="Your message here..."></textarea>
+                                            <button type="submit" class="btn btn-default">Send</button>
+                                        </div>
+                                    </div>                        
+                                </form>    
+                            </div>                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
