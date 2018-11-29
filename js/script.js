@@ -1,30 +1,25 @@
 $(function() {  
-    // Parallax
+    /* Enables parallax */
     $('.aboutme-area').parallax({
         imageSrc: 'img/bg1.jpg',
         speed: 0.2
     });
-
     $('.skills-area').parallax({
         imageSrc: 'img/bg5.jpg',
         speed: 0.2
     });
-
     $('.education-area').parallax({
         imageSrc: 'img/uci.jpg',
         speed: 0.2
     });
-
     $('.projects-area').parallax({
         imageSrc: 'img/bg3.jpg',
         speed: 0.2
     });
-
     $('.experience-area').parallax({
         imageSrc: 'img/bg4.jpg',
         speed: 0.2
     });
-
     $('.hobbies-area').parallax({
         imageSrc: 'img/bjj.jpg',
         speed: 0.2
@@ -36,7 +31,7 @@ $(function() {
     });
 
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
-    // Enables smooth scrolling
+    /* Enables smooth scrolling */
     $("#myNavbar a").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
@@ -58,4 +53,12 @@ $(function() {
           });
         } // End if
       });
+
+    /* Overlay Effects */
+    $('.project-content').find('img').on('click', function(){
+        $(this).siblings('.overlay').css('display', 'block');
+    });   
+    $('.overlay').on('click', function(){
+        $('.overlay').css('display', 'none');
+    });
 });

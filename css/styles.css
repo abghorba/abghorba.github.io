@@ -3,15 +3,19 @@ html, body {
     width: 100vw;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
 section {
     margin: 0;
     padding: 10px;
-}
-
-.section-container {
-    color: black;
-    background-color: white;
-    opacity: 0.45;
 }
 
 .page-header {
@@ -27,4 +31,82 @@ section {
 .fill-section {
     height: calc(100vh - 40px);
     width: 100vw;
+}
+
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 90%;
+    height: 90%;
+    top: 40px; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+.img-trans {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.green-text { color: #178A27; }
+.blue-text { color: #1686C1; }
+.gray-text { color: #1686C1; }
+.green-btn { background: #178A27; }
+.green-btn:hover { background: #449D44; }
+.blue-btn { background: #1686C1; }
+.blue-btn:hover { background: #31B0D5; }
+.red-btn { background: #852406; }
+.red-btn:hover { background: #C9302C; }
+.project-content {
+    background: #F2F2F2;
+    padding-bottom: 40px;
+    opacity: 0.75;
+}
+.project-title {
+    padding: 0 20px;
+    text-align: center;    
+}
+.project-description {
+    padding: 0 20px 35px;
+    text-align: left;
+    color: #333333;
+    margin-top: 15px;
+}
+.project-link {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+.project-link:hover, .project-link:link, .project-link:visited  {
+  color: white;
+  text-decoration: none;
 }
