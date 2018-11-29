@@ -1,26 +1,26 @@
 $(function() {  
     /* Enables parallax */
-    $('.aboutme-area').parallax({
-        imageSrc: 'img/bg1.jpg',
+    $('#aboutme').parallax({
+        imageSrc: 'img/intro.jpg',
         speed: 0.2
     });
-    $('.skills-area').parallax({
-        imageSrc: 'img/bg5.jpg',
+    $('#skills').parallax({
+        imageSrc: 'img/skills.png',
         speed: 0.2
     });
-    $('.education-area').parallax({
+    $('#education').parallax({
         imageSrc: 'img/uci.jpg',
         speed: 0.2
     });
-    $('.projects-area').parallax({
-        imageSrc: 'img/bg3.jpg',
+    $('#projects').parallax({
+        imageSrc: 'img/projects.jpg',
         speed: 0.2
     });
-    $('.experience-area').parallax({
+    $('#experience').parallax({
         imageSrc: 'img/bg4.jpg',
         speed: 0.2
     });
-    $('.hobbies-area').parallax({
+    $('#hobbies').parallax({
         imageSrc: 'img/bjj.jpg',
         speed: 0.2
     });
@@ -53,12 +53,4 @@ $(function() {
           });
         } // End if
       });
-
-    /* Overlay Effects */
-    $('.project-content').find('img').on('click', function(){
-        $(this).siblings('.overlay').css('display', 'block');
-    });   
-    $('.overlay').on('click', function(){
-        $('.overlay').css('display', 'none');
-    });
 });

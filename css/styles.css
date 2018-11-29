@@ -3,19 +3,35 @@ html, body {
     width: 100vw;
 }
 
+#intro {
+    padding-top:100px;
+}
+
 img {
     max-width: 100%;
     height: auto;
     border: none;
 }
 
-img:hover {
-    opacity: 0.7;
-}
-
 section {
     margin: 0;
     padding: 10px;
+}
+
+.aboutme-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.25);
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+}
+
+.skills-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 }
 
 .page-header {
@@ -33,44 +49,29 @@ section {
     width: 100vw;
 }
 
-.overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 90%;
-    height: 90%;
-    top: 40px; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+.skill-icon {
+    height: 10%;
+    width: 10%;
+    vertical-align: -30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(255,255,255,.15)
 }
+.skill-icon:hover {
+    cursor: pointer;
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
+}
+
+
 .img-trans {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
 }
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+.img-trans:hover {
+    opacity: 0.7;
 }
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
 
 .green-text { color: #178A27; }
 .blue-text { color: #1686C1; }
