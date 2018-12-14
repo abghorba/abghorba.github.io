@@ -13,9 +13,6 @@
 
         <!-- Get the FontAwesome Icons-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-        <!-- Devicon from http://konpa.github.io/devicon/ -->
-        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
        
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -34,6 +31,7 @@
 
     <body data-spy="scroll" data-target=".navbar" data-offset="60">
 
+        <!-- Navigation bar -->
         <nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
@@ -47,22 +45,22 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="mailto:andrewbghorbani@gmail.com"><i class="fa fa-envelope" style="font-size:16px"> Email </i></a></li>
-                    <li><a href="https://www.github.com/abghorba"><i class="fa fa-github" style="font-size:16px"> GitHub </i></a></li>
-                    <li><a href="https://www.linkedin.com/in/andrewghorbani/"><i class="fa fa-linkedin-square" style="font-size:16px"> LinkedIn </i></a></li>
+                    <li><a href="https://www.github.com/abghorba" target="_blank" ><i class="fa fa-github" style="font-size:16px"> GitHub </i></a></li>
+                    <li><a href="https://www.linkedin.com/in/andrewghorbani/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:16px"> LinkedIn </i></a></li>
                 </ul>
             </div>
         </nav>
 
+        <!-- Introduction Section -->
         <section id="intro">
-            <div class="jumbotron fill-section">
-                <div class="container text-center">
-                    <img src="img/profile.jpg" class="img-circle text-center img-trans" alt="Portrait" style="width:45%">
-                    <h1>Andrew Ghorbani</h1> 
-                    <p>Aspiring Software Engineer/Developer</p> 
-                </div>
+            <div class="container text-center">
+                <img src="img/profile.jpg" class="img-circle text-center img-trans" alt="Portrait" style="width:40%">
+                <h1 class="myname">Andrew Ghorbani</h1> 
+                <p class="desiredjob">Aspiring Software Engineer/Developer</p> 
             </div>
         </section>
         
+        <!-- About Me Section -->
         <section id="aboutme" class="fill-section"> 
             <div class="page-header">
                 <h1 class="centered-section"> About Me </h1>
@@ -75,11 +73,13 @@
             </div>
         </section>
         
+        <!-- Skills Section -->
         <section id="skills" class="fill-section"> 
             <div class="page-header">
                 <h1 class="centered-section"> Technical Skills </h1>
             </div>
             <div class="container skills-text">
+                <!-- All SVG's taken from http://konpa.github.io/devicon/ -->
                 <p>Languages: 
                     <!-- Python -->
                     <svg viewBox="0 0 128 128" class="skill-icon">
@@ -141,6 +141,7 @@
             </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education" class="fill-section">
             <div class="page-header">
                 <h1 class="centered-section"> Education </h1>
@@ -166,74 +167,135 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="fill-section">
             <div class="page-header">
                 <h1 class="centered-section"> Projects </h1>
             </div>
-            <div class="container-fluid">
-                <div class="row text-center inner">
-                    <div class="col-sm-3">
-                        <div class="project-content">
-                            <img src="img/stock.png" alt="Image" class="img-trans">
-                            <h2 class="project-title green-text">Stock Emulator</h2>
-                            <p class="project-description">A Python and Flask web application that simulates buying and selling stocks. Users create an account and start out with $10,000. User information and transaction history are stored in a MySQL database.</p>
-                            <a href="http://www.stock-emulator.m4mvtr6c2m.us-west-1.elasticbeanstalk.com/" class="project-link blue-btn">Website</a>
-                            <a href="https://github.com/abghorba/Stock-Emulator" class="project-link green-btn">Repository</a>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">  
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol> 
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row text-center inner">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/stock.png" alt="Image" class="img-trans">
+                                    <h2 class="project-title green-text">Stock Emulator</h2>
+                                    <p class="project-description">A Python and Flask web application that simulates buying and selling stocks. Users create an account and start out with $10,000. User information and transaction history are stored in a MySQL database.</p>
+                                    <a href="http://www.stock-emulator.m4mvtr6c2m.us-west-1.elasticbeanstalk.com/" class="project-link blue-btn">Website</a>
+                                    <a href="https://github.com/abghorba/Stock-Emulator" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/weather.png" alt="Image" class="img-trans" style="height: 25%; width: 35%">
+                                    <img src="img/weather.png" alt="Image" class="img-trans" style="height: 25%; width: 35%">
+                                    <h2 class="project-title blue-text">Weather Messager</h2>
+                                    <p class="project-description">A Python and Flask web application that contacts the Dark Sky API for weather forecasts and parses the JSON response for relevant information and sends an SMS message using Twilio's API to the user's mobile phone. Supports changing cities by zip code by querying a PostgreSQL database for latitude and longitude and updating the coordinates that will be sent to the Dark Sky API.</p>                    
+                                    <a href="https://github.com/abghorba/Weather-Messager" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="project-content">
-                            <img src="img/weather.png" alt="Image" class="img-trans" style="height: 25%; width: 35%">
-                            <h2 class="project-title blue-text">Weather Messager</h2>
-                            <p class="project-description">A Python and Flask web application that contacts the Dark Sky API for weather forecasts and parses the JSON response for relevant information and sends an SMS message using Twilio's API to the user's mobile phone. Supports changing cities by zip code by querying a PostgreSQL database for latitude and longitude and updating the coordinates that will be sent to the Dark Sky API.</p>                    
-                            <a href="https://github.com/abghorba/Weather-Messager" class="project-link green-btn">Repository</a>
+                    <div class="item">
+                        <div class="row text-center inner">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/punk.png" alt="Image" class="img-trans">
+                                    <h2 class="project-title red-text">Punk Beer</h2>
+                                    <p class="project-description">A static web application that uses AJAX requests to the Punk API and parses the JSON response for beer title, image, tagline, and description. There is an option to make requests to the API by ABV percentage. Written in JavaScript, jQuery, HTML5, and Bootstrap.</p>
+                                    <a href="http://punkbeer.s3-website-us-west-1.amazonaws.com/" target="_blank" class="project-link blue-btn">Website</a>
+                                    <a href="https://github.com/abghorba/Punk-Beer-App" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/bg4.jpg" alt="Image" class="img-trans" width="50%">
+                                    <h2 class="project-title green-text">Unbeatable Tic Tac Toe</h2>
+                                    <p class="project-description">An implementation of the classic game Tic Tac Toe played on the command line. Written in Java and uses an artificial intelligence algorithm called the minimax algorithm so the computer can determine its best move. The computer will never lose; the worst-case is a draw.</p>
+                                    <a href="https://github.com/abghorba/Tic-Tac-Toe" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="project-content">
-                            <img src="img/punk.png" alt="Image" class="img-trans">
-                            <h2 class="project-title red-text">Punk Beer</h2>
-                            <p class="project-description">A static web application that uses AJAX requests to the Punk API and parses the JSON response for beer title, image, tagline, and description. There is an option to make requests to the API by ABV percentage. Written in JavaScript, jQuery, HTML5, and Bootstrap.</p>
-                            <a href="http://punkbeer.s3-website-us-west-1.amazonaws.com/" class="project-link blue-btn">Website</a>
-                            <a href="https://github.com/abghorba/Punk-Beer-App" class="project-link green-btn">Repository</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="project-content">
-                            <img src="img/bg4.jpg" alt="Image" class="img-trans">
-                            <h2 class="project-title green-text">Unbeatable Tic Tac Toe</h2>
-                            <p class="project-description">An implementation of the classic game Tic Tac Toe played on the command line. Written in Java and uses an artificial intelligence algorithm called the minimax algorithm so the computer can determine its best move. The computer will never lose; the worst-case is a draw.</p>
-                            <a href="https://github.com/abghorba/Tic-Tac-Toe" class="project-link green-btn">Repository</a>
+                    <div class="item">
+                        <div class="row text-center inner">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/comingsoon.png" alt="Image" class="img-trans">
+                                    <h2 class="project-title red-text">Coming Soon!</h2>
+                                    <p class="project-description">New project coming soon!</p>
+                                    <a href="" target="_blank" class="project-link blue-btn">Website</a>
+                                    <a href="" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="project-content">
+                                    <img src="img/comingsoon.png" alt="Image" class="img-trans">
+                                    <h2 class="project-title green-text">Coming Soon!</h2>
+                                    <p class="project-description">New project coming soon!</p>
+                                    <a href="https://github.com/abghorba/Tic-Tac-Toe" target="_blank" class="project-link green-btn">Repository</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-2"></div>
                         </div>
                     </div>
                 </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="fill-section">
             <div class="page-header">
                 <h1 class="centered-section"> Experience </h1>
             </div>
-            <div class="container">
-                <h2>Undergraduate Student Researcher, Summer 2017</h2>
-                <h3>Mathematical and Computational Biology for Undergraduates</h3>
-                <p>Summer research project with the Mathematical and Computational Biology for Undergraduates at the University of California, Irvine conducted in teams of two under guidance from two advisors on the development and analysis of stochastic models on the spread of Chlamydia trachomatis.</p>
-                <ul> ➢ Used stochastic processes and probability theory to generate a mathematical model </ul>
-                <ul> ➢ Programmed computers to store, process, and analyze data using MATLAB and Mathematica </ul>
-                <ul> ➢ Implemented algorithms to validate the model </ul>
-                <ul> ➢ Interpreted research findings and summarized data into reports using LaTeX </ul>
-                <ul> ➢ Collaborated successfully with team to complete research and presentation </ul>
-                <ul> ➢ Presented research at the 2017 Summer Undergraduate Capstone Conference held at Ohio State University </ul>
+            <div class="container jobs">
+                <h2 class="job-title">Undergraduate Student Researcher, Summer 2017</h2>
+                <h3 class="employer">Mathematical and Computational Biology for Undergraduates</h3>
+                <p class="summary">Summer research project with the Mathematical and Computational Biology for Undergraduates at the University of California, Irvine conducted in teams of two under guidance from two advisors on the development and analysis of stochastic models on the spread of Chlamydia trachomatis.</p>
+                <div class="experience-text">
+                    <ul> ➢ Used stochastic processes and probability theory to generate a mathematical model </ul>
+                    <ul> ➢ Programmed computers to store, process, and analyze data using MATLAB and Mathematica </ul>
+                    <ul> ➢ Implemented algorithms to validate the model </ul>
+                    <ul> ➢ Interpreted research findings and summarized data into reports using LaTeX </ul>
+                    <ul> ➢ Collaborated successfully with team to complete research and presentation </ul>
+                    <ul> ➢ Presented research at the 2017 Summer Undergraduate Capstone Conference held at Ohio State University </ul>
+                </div>
+                <a href="https://mbi.osu.edu/video/player/?id=4316&title=Stochastic+Model+on+the+Spread+of+Chlamydia+Trachomatis" target="_blank" class="project-link blue-btn">Presentation</a>
+                <a href="#" class="project-link green-btn">Report</a>
+                <a href="#" class="project-link red-btn">PowerPoint</a>
             </div>
         </section>
 
+        <!-- Hobbies Section -->
         <section id="hobbies" class="fill-section">
             <div class="page-header">
                 <h1 class="centered-section"> Hobbies </h1>
             </div>
             <div class="container">
+                <h2>Brazilian Jiu-jitsu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <h2>Music</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
+                <h2>Video Games</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at urna ultricies, pellentesque leo sed, tempus lectus. Cras tellus sapien, vestibulum vitae convallis sed, euismod id massa. Praesent cursus interdum sem at imperdiet. Aenean tincidunt, leo quis convallis fringilla, elit metus cursus metus, id auctor quam enim in purus. Integer non tristique elit. Praesent massa augue, vestibulum volutpat sapien vitae, sollicitudin rutrum erat. Praesent sed velit nec eros dictum efficitur. Aliquam erat volutpat. Integer molestie neque eu tortor commodo, sit amet varius arcu tincidunt. Nunc vel nunc eget enim egestas aliquet at nec tellus. Mauris eleifend purus magna, eu rutrum dui pretium sit amet. Ut turpis felis, cursus vel tellus et, suscipit aliquam augue. Nunc eget ligula enim. Nulla sit amet mauris eu quam elementum lacinia faucibus sed urna.</p>
             </div>
         </section>

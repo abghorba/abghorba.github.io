@@ -1,5 +1,9 @@
 $(function() {  
     /* Enables parallax */
+    $('#intro').parallax({
+        imageSrc: 'img/math1.jpg',
+        speed: 0.2
+    });
     $('#aboutme').parallax({
         imageSrc: 'img/intro.jpg',
         speed: 0.2
@@ -25,7 +29,7 @@ $(function() {
         speed: 0.2
     });
 
-    // Updates the URL with appropriate hash code on scrollspy event
+    /* Updates the URL with appropriate hash code on scrollspy event */
     $(window).on('activate.bs.scrollspy', function (e) {
         history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
     });
