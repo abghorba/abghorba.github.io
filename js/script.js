@@ -1,31 +1,31 @@
 $(function() {  
-    /* Enables parallax */
+    /* Enables parallax by creating a div with the .parallax-mirror class */
     $('#intro').parallax({
-        imageSrc: 'img/math1.jpg',
+        imageSrc: 'img/parallax1.jpg',
         speed: 0.2
     });
     $('#aboutme').parallax({
-        imageSrc: 'img/intro.jpg',
+        imageSrc: 'img/parallax2.jpg',
         speed: 0.2
     });
     $('#skills').parallax({
-        imageSrc: 'img/skills.png',
+        imageSrc: 'img/parallax3.png',
         speed: 0.2
     });
     $('#education').parallax({
-        imageSrc: 'img/uci.jpg',
+        imageSrc: 'img/parallax4.jpg',
         speed: 0.2
     });
     $('#projects').parallax({
-        imageSrc: 'img/projects.jpg',
+        imageSrc: 'img/parallax5.jpg',
         speed: 0.2
     });
     $('#experience').parallax({
-        imageSrc: 'img/bg4.jpg',
+        imageSrc: 'img/parallax6.jpg',
         speed: 0.2
     });
     $('#hobbies').parallax({
-        imageSrc: 'img/bjj.jpg',
+        imageSrc: 'img/parallax7.jpg',
         speed: 0.2
     });
 
@@ -56,5 +56,24 @@ $(function() {
             window.location.hash = hash;
           });
         } // End if
-      });
+    });
+
+    /* Adding image cross-fades on Hobbies Section, bjj subsection */
+    setInterval("cycleImages('#bjj-cycler')", 6000);
+
+    /* Adding image cross-fades on Hobbies Section, music subsection */
+    setInterval("cycleImages('#music-cycler')", 6000);
+
+    /* Adding image cross-fades on Hobbies Section, video game subsection */
+    setInterval("cycleImages('#vg-cycler')", 6000);
 });
+
+function cycleImages( cycler ) {
+    var $active = $(cycler + ' .active');
+    var $next = ($active.next().length > 0) ? $active.next() : $(cycler + ' img:first');
+    $next.css('z-index', 2); //move the next div up the pile
+    $active.fadeOut(1500, function(){//fade out the top div
+        $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the div
+        $next.css('z-index', 3).addClass('active');//make the next div the top one
+    });
+}

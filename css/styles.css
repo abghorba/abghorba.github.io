@@ -4,6 +4,10 @@
     height: 100vh;
     width: 100vw;
 }
+#profile {
+    width: 30%;
+    padding-bottom: 10px;
+}
 .myname {
     font-variant: small-caps;
     font-size: 600%;
@@ -18,7 +22,7 @@
 /* Parallax effect */
 .parallax-mirror {
     -webkit-filter: blur(1.75px) brightness(65%) contrast(90%);
-    filter: blur(1.75px) brightness(65%) contrast(90%);
+    filter: blur(1px) brightness(65%) contrast(90%);
 }
 
 /* Images */
@@ -29,11 +33,10 @@ img {
 }
 .img-trans {
     cursor: pointer;
-    border-radius: 5px;
     transition: 0.3s;
 }
 .img-trans:hover {
-    filter: brightness(0.9);
+    filter: brightness(.85);
 }
 
 /* Sections */
@@ -42,21 +45,38 @@ section {
     padding: 10px;
 }
 .page-header {
-    text-shadow: 0px 0px 3px #fff, -1px -1px #fff, 1px 1px #fff;
+    text-shadow: 0px 0px 20px #0f0, -1px -1px #0f0, 1px 1px #0f0;
     font-size: 48px;
     text-transform: uppercase;
 }
 .centered-section {
     text-align: center;
 }
-.fill-section {
-    height: calc(100vh - 40px);
-    width: 100vw;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .fill-section {
+        height: calc(200vh - 40px);
+        width: 100vw;
+    }
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .fill-section {
+        height: calc(150vh - 40px);
+        width: 100vw;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .fill-section {
+        height: calc(100vh - 40px);
+        width: 100vw;
+    }
 }
 
 /* About Me Section */
 .aboutme-text {
-    font-size: 120%;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
@@ -74,18 +94,17 @@ section {
     padding-bottom: 20px;
 }
 .skill-icon {
-    height: 13%;
-    width: 13%;
+    height: 10%;
+    width: 10%;
     vertical-align: -30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    -webkit-filter: brightness(0.75);
-    filter: brightness(0.75);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .skill-icon:hover {
     cursor: pointer;
-    -webkit-filter: brightness(0.5);
-    filter: brightness(1.5);
+    -webkit-filter: brightness(1.5);
+            filter: brightness(1.5);
+    transform: scale(1.5)
 }
 
 /* Projects Section */
@@ -163,5 +182,75 @@ section {
     padding-bottom: 20px;
     font-size: 120%
 }
+.experience-links {
+    text-align: center;
+}
 
 /* Hobbies Section */
+.bjj-header {
+    color: blue;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 10px #fff, -1px -1px #fff, 1px 1px #fff;
+    padding-bottom: 20px;
+}
+#bjj-cycler img {
+    position: absolute;
+    z-index:1;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 400px;
+    width: 475px;
+}
+.music-header {
+    color: green;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 10px #fff, -.5px -.5px #fff, .5px .5px #fff;
+    padding-bottom: 20px;
+}
+#music-cycler img {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 400px;
+    width: 350px;
+}
+.vg-header {
+    color: red;
+    font-variant: small-caps;
+    text-shadow: 0px 0px 10px #fff, -.5px -.5px #fff, .5px .5px #fff;
+    padding-bottom: 20px;
+}
+#bjj-cycler, #music-cycler #vg-cycler {position:relative;}
+#vg-cycler img {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 400px;
+    width: 300px;
+}
+#bjj-cycler img.active, #music-cycler img.active, #vg-cycler img.active {z-index:3;}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
