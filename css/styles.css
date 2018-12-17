@@ -22,7 +22,7 @@
 /* Parallax effect */
 .parallax-mirror {
     -webkit-filter: blur(1.75px) brightness(65%) contrast(90%);
-    filter: blur(1px) brightness(65%) contrast(90%);
+            filter: blur(1px) brightness(65%) contrast(90%);
 }
 
 /* Images */
@@ -94,8 +94,8 @@ section {
     padding-bottom: 20px;
 }
 .skill-icon {
-    height: 10%;
-    width: 10%;
+    height: 10vh;
+    width: 10vw;
     vertical-align: -30px;
     padding-left: 25px;
     padding-right: 25px;
@@ -106,6 +106,7 @@ section {
             filter: brightness(1.5);
     transform: scale(1.5)
 }
+
 
 /* Projects Section */
 .green-text { color: #178A27; }
@@ -119,7 +120,7 @@ section {
 .red-btn:hover { background: rgb(230, 67, 61); }
 .project-content {
     background: #F2F2F2;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     opacity: 0.75;
     border-style: solid;
     border-color: royalblue;
@@ -127,10 +128,10 @@ section {
 .project-title {
     padding: 0 20px;
     text-align: center;
-    font-variant: small-caps;    
+    font-variant: small-caps; 
 }
 .project-description {
-    padding: 0 20px 35px;
+    padding: 0 20px 25px;
     text-align: left;
     color: #333333;
     margin-top: 15px;
@@ -157,33 +158,148 @@ section {
     position: relative;
 }
 .carousel-indicators {
-    position: absolute;
-    bottom: -50px;
+    /* position: absolute; */
+    bottom: -10px;
 }
 
+
 /* Experience Section */
-.job-title {
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    color: dodgerblue;
+/* Timeline taken and modified from http://bestjquery.com/tutorial/timeline/demo50/ */
+:root{
+    --white: #fff;
+    --black: #000;
+    --color_1: #EA2027;
+    --color_2: #1F5295;
+    --color_3: #89b743;
+    --color_4: #e02a6d;
 }
-.employer {
-    color: rgba(255, 0, 34, 0.849);
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+.main-timeline{ font-family: 'Niramit', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
 }
-.summary {
-    color: lightblue;
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    font-style: italic;
-    font-size: 120%
+.main-timeline .timeline{ margin: 0 -15px; }
+.main-timeline .timeline-content{
+    color: var(--color_1);
+    text-align: left;
+    display: block;
+    position: relative;
 }
-.experience-text {
-    color: rgb(142, 190, 206);
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    padding-bottom: 20px;
-    font-size: 120%
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-year{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
 }
-.experience-links {
+/* Controls the timeline bar */
+.main-timeline .timeline-year:after{
+    content: '';
+    height: 60px;
+    width: 107%;
+    background-color: var(--color_1);
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    opacity: 0.8;
+    -webkit-clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+/* Timeline Year */
+.main-timeline .timeline-year span{
+    color: var(--white);
+    background-color: var(--color_1);
+    font-size: 35px;
+    font-weight: 600;
     text-align: center;
+    line-height: 120px;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    display: block;
+}
+.main-timeline .inner-content{
+    padding: 0 10px 10px 15px;
+    border-left: 10px solid var(--color_1);
+    height: 55vh;
+}
+.main-timeline .title{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+.main-timeline .description{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Creates blue timeline piece */
+.main-timeline .timeline.blue .title{
+    color: var(--color_2);
+}
+.main-timeline .timeline.blue .timeline-year:after,
+.main-timeline .timeline.blue .timeline-year span{
+    background-color: var(--color_2);
+}
+.main-timeline .timeline.blue .inner-content{ 
+    border-left-color: var(--color_2); 
+    height: 55vh;
+}
+
+/* Creates green timeline piece */
+.main-timeline .timeline.green .title{
+    color: var(--color_3);
+}
+.main-timeline .timeline.green .timeline-year:after,
+.main-timeline .timeline.green .timeline-year span{
+    background-color: var(--color_3);
+}
+.main-timeline .timeline.green .inner-content{ 
+    border-left-color: var(--color_3);
+    height: 55vh;
+}
+
+/* Creates pink timeline piece */
+.main-timeline .timeline.pink .title{
+    color: var(--color_4);
+}
+.main-timeline .timeline.pink .timeline-year:after,
+.main-timeline .timeline.pink .timeline-year span{
+    background-color: var(--color_4);
+}
+.main-timeline .timeline.pink .inner-content{
+    border-left-color: var(--color_4);
+    height: 55vh;
+}
+
+/* Responsive timeline */
+@media screen and (max-width:767px){
+    .main-timeline .timeline{ margin: 0 0 15px; }
+    .main-timeline .timeline-year:after{ width: 100%; }
+}
+.experience-link {
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+.experience-link:hover, .experience-link:link, .experience-link:visited  {
+    color: white;
+    text-decoration: none;
+}
+#timeline1, #timeline2, #timeline3, #timeline4 {
+    display: none;
 }
 
 /* Hobbies Section */

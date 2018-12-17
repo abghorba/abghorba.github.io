@@ -30,13 +30,15 @@ $(function() {
     });
 
     /* Updates the URL with appropriate hash code on scrollspy event */
-    $(window).on('activate.bs.scrollspy', function (e) {
+    $(window).on('activate.bs.scrollspy', function(e) {
         history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
+        // Trigger hashchange event
+        $(window).trigger('hashchange')
     });
 
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
     /* Enables smooth scrolling */
-    $("#myNavbar a").on('click', function(event) {
+    $("#myNavbar a").on('click', function(e) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -44,18 +46,19 @@ $(function() {
           event.preventDefault();
     
           // Store hash
-          var hash = this.hash;
+          let hash = this.hash;
     
           // Using jQuery's animate() method to add smooth page scroll
           $navbarHeight = $('.navbar').height()
           $('html, body').animate({
             scrollTop: $(hash).offset().top - $navbarHeight,
-          }, 800, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
+          }, 800);
         } // End if
+    });
+
+    $(window).on('hashchange', function(e) {
+        let hash = window.location.hash
+        if (hash === "#experience") { revealTimeline(); }
     });
 
     /* Adding image cross-fades on Hobbies Section, bjj subsection */
@@ -76,4 +79,17 @@ function cycleImages( cycler ) {
         $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the div
         $next.css('z-index', 3).addClass('active');//make the next div the top one
     });
+}
+
+function revealTimeline() {
+    $('#timeline1').fadeIn(1000);
+    setTimeout(function(){
+        $('#timeline2').fadeIn(1000);
+    }, 1000)
+    setTimeout(function(){
+        $('#timeline3').fadeIn(1000);
+    }, 2000)
+    setTimeout(function(){
+        $('#timeline4').fadeIn(1000);
+    }, 3000)
 }

@@ -27,27 +27,37 @@
         <script src="js/script.js"></script>
 
         <title>Andrew Ghorbani</title>
-  </head>
+    </head>
 
     <body data-spy="scroll" data-target=".navbar" data-offset="60">
 
         <!-- Navigation bar -->
-        <nav id="myNavbar" class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
-                <ul class="nav navbar-nav">
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#aboutme">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="mailto:andrewbghorbani@gmail.com"><i class="fa fa-envelope" style="font-size:16px"> Email </i></a></li>
-                    <li><a href="https://www.github.com/abghorba" target="_blank" ><i class="fa fa-github" style="font-size:16px"> GitHub </i></a></li>
-                    <li><a href="https://www.linkedin.com/in/andrewghorbani/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:16px"> LinkedIn </i></a></li>
-                </ul>
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="">Portfolio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#intro">Home</a></li>
+                        <li><a href="#aboutme">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="mailto:andrewbghorbani@gmail.com"><i class="fa fa-envelope" style="font-size:16px"> Email </i></a></li>
+                        <li><a href="https://www.github.com/abghorba" target="_blank" ><i class="fa fa-github" style="font-size:16px"> GitHub </i></a></li>
+                        <li><a href="https://www.linkedin.com/in/andrewghorbani/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:16px"> LinkedIn </i></a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -161,94 +171,96 @@
             <div class="page-header">
                 <h1 class="centered-section"> Projects </h1>
             </div>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">  
-                <!-- Carousel indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol> 
-                <!-- Wrapper for carousel items -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="row text-center inner">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/stock.png" alt="Image" class="img-trans">
-                                    <h2 class="project-title green-text">Stock Emulator</h2>
-                                    <p class="project-description">A Python and Flask web application that simulates buying and selling stocks. Users create an account and start out with $10,000. Stock information is received by making requests to the IEX API and parsing the JSON response. User information and transaction history are stored in a MySQL database.</p>
-                                    <a href="http://www.stock-emulator.m4mvtr6c2m.us-west-1.elasticbeanstalk.com/" target="_blank" class="project-link blue-btn">Website</a>
-                                    <a href="https://github.com/abghorba/Stock-Emulator" target="_blank" class="project-link green-btn">Repository</a>
+            <div class="container-fluid">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">  
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol> 
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row text-center inner">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/stock.png" alt="Image" class="img-trans">
+                                        <h2 class="project-title green-text">Stock Emulator</h2>
+                                        <p class="project-description">A Python and Flask web application that simulates buying and selling stocks. Users create an account and start out with $10,000. Stock information is received by making requests to the IEX API and parsing the JSON response. User information and transaction history are stored in a MySQL database.</p>
+                                        <a href="http://www.stock-emulator.m4mvtr6c2m.us-west-1.elasticbeanstalk.com/" target="_blank" class="project-link blue-btn">Website</a>
+                                        <a href="https://github.com/abghorba/Stock-Emulator" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/punk.png" alt="Image" class="img-trans">
-                                    <h2 class="project-title red-text">Punk Beer</h2>
-                                    <p class="project-description">A static web application that uses AJAX requests to the Punk API and parses the JSON response for beer title, image, tagline, and description. There is an option to make requests to the API by ABV percentage. Written in JavaScript, jQuery, HTML5, and Bootstrap.</p>
-                                    <a href="http://punkbeer.s3-website-us-west-1.amazonaws.com/" target="_blank" class="project-link blue-btn">Website</a>
-                                    <a href="https://github.com/abghorba/Punk-Beer-App" target="_blank" class="project-link green-btn">Repository</a>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/punk.png" alt="Image" class="img-trans">
+                                        <h2 class="project-title red-text">Punk Beer</h2>
+                                        <p class="project-description">A static web application that uses AJAX requests to the Punk API and parses the JSON response for beer title, image, tagline, and description. There is an option to make requests to the API by ABV percentage. Written in JavaScript, jQuery, HTML5, and Bootstrap.</p>
+                                        <a href="http://punkbeer.s3-website-us-west-1.amazonaws.com/" target="_blank" class="project-link blue-btn">Website</a>
+                                        <a href="https://github.com/abghorba/Punk-Beer-App" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
                                 </div>
+                                <div class="col-sm-2"></div>
                             </div>
-                            <div class="col-sm-2"></div>
+                        </div>
+                        <div class="item">
+                            <div class="row text-center inner">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/weather.png" alt="Image" class="img-trans" style="height: 25%; width: 31.5%">
+                                        <img src="img/weather2.png" alt="Image" class="img-trans" style="height: 25%; width: 30%">
+                                        <h2 class="project-title blue-text">Weather Messager</h2>
+                                        <p class="project-description">A Python and Flask web application that contacts the Dark Sky API for weather forecasts and parses the JSON response for relevant information and sends an SMS message using Twilio's API to the user's mobile phone. Supports changing cities by zip code by querying a PostgreSQL database for latitude and longitude and updating the coordinates that will be sent to the Dark Sky API.</p>                    
+                                        <a href="https://github.com/abghorba/Weather-Messager" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/space.jpg" alt="Image" class="img-trans" width="75%">
+                                        <h2 class="project-title green-text">Unbeatable Tic Tac Toe</h2>
+                                        <p class="project-description">An implementation of the classic game Tic Tac Toe played on the command line. Written in Java and uses an artificial intelligence algorithm called the minimax algorithm so the computer can determine its best move. The computer will never lose; the worst-case is a draw.</p>
+                                        <a href="https://github.com/abghorba/Tic-Tac-Toe" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row text-center inner">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/comingsoon.png" alt="Image" class="img-trans">
+                                        <h2 class="project-title red-text">Coming Soon!</h2>
+                                        <p class="project-description">New project coming soon!</p>
+                                        <a href="" target="_blank" class="project-link blue-btn">Website</a>
+                                        <a href="" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="project-content">
+                                        <img src="img/comingsoon.png" alt="Image" class="img-trans">
+                                        <h2 class="project-title green-text">Coming Soon!</h2>
+                                        <p class="project-description">New project coming soon!</p>
+                                        <a href="" target="_blank" class="project-link blue-btn">Website</a>
+                                        <a href="" target="_blank" class="project-link green-btn">Repository</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="row text-center inner">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/weather.png" alt="Image" class="img-trans" style="height: 25%; width: 31.5%">
-                                    <img src="img/weather2.png" alt="Image" class="img-trans" style="height: 25%; width: 30%">
-                                    <h2 class="project-title blue-text">Weather Messager</h2>
-                                    <p class="project-description">A Python and Flask web application that contacts the Dark Sky API for weather forecasts and parses the JSON response for relevant information and sends an SMS message using Twilio's API to the user's mobile phone. Supports changing cities by zip code by querying a PostgreSQL database for latitude and longitude and updating the coordinates that will be sent to the Dark Sky API.</p>                    
-                                    <a href="https://github.com/abghorba/Weather-Messager" target="_blank" class="project-link green-btn">Repository</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/space.jpg" alt="Image" class="img-trans" width="75%">
-                                    <h2 class="project-title green-text">Unbeatable Tic Tac Toe</h2>
-                                    <p class="project-description">An implementation of the classic game Tic Tac Toe played on the command line. Written in Java and uses an artificial intelligence algorithm called the minimax algorithm so the computer can determine its best move. The computer will never lose; the worst-case is a draw.</p>
-                                    <a href="https://github.com/abghorba/Tic-Tac-Toe" target="_blank" class="project-link green-btn">Repository</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row text-center inner">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/comingsoon.png" alt="Image" class="img-trans">
-                                    <h2 class="project-title red-text">Coming Soon!</h2>
-                                    <p class="project-description">New project coming soon!</p>
-                                    <a href="" target="_blank" class="project-link blue-btn">Website</a>
-                                    <a href="" target="_blank" class="project-link green-btn">Repository</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="project-content">
-                                    <img src="img/comingsoon.png" alt="Image" class="img-trans">
-                                    <h2 class="project-title green-text">Coming Soon!</h2>
-                                    <p class="project-description">New project coming soon!</p>
-                                    <a href="" target="_blank" class="project-link blue-btn">Website</a>
-                                    <a href="" target="_blank" class="project-link green-btn">Repository</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
-                <!-- Carousel controls -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
             </div>
         </section>
 
@@ -258,22 +270,85 @@
             <div class="page-header">
                 <h1 class="centered-section"> Experience </h1>
             </div>
-            <div class="container jobs">
-                <h2 class="job-title">Undergraduate Student Researcher, Summer 2017</h2>
-                <h3 class="employer">Mathematical and Computational Biology for Undergraduates</h3>
-                <p class="summary">Summer research project with the Mathematical and Computational Biology for Undergraduates at the University of California, Irvine conducted in teams of two under guidance from two advisors on the development and analysis of stochastic models on the spread of Chlamydia trachomatis.</p>
-                <div class="experience-text">
-                    <ul> ➢ Used stochastic processes and probability theory to generate a mathematical model </ul>
-                    <ul> ➢ Programmed computers to store, process, and analyze data using MATLAB and Mathematica </ul>
-                    <ul> ➢ Implemented algorithms to validate the model </ul>
-                    <ul> ➢ Interpreted research findings and summarized data into reports using LaTeX </ul>
-                    <ul> ➢ Collaborated successfully with team to complete research and presentation </ul>
-                    <ul> ➢ Presented research at the 2017 Summer Undergraduate Capstone Conference held at Ohio State University </ul>
-                </div>
-                <div class="experience-links">
-                    <a href="https://mbi.osu.edu/video/player/?id=4316&title=Stochastic+Model+on+the+Spread+of+Chlamydia+Trachomatis" target="_blank" class="project-link blue-btn">Presentation</a>
-                    <a href="img/mcbu-report.pdf" target="_blank" class="project-link green-btn">Report</a>
-                    <a href="img/mcbu-ppt.pdf" target="_blank" class="project-link red-btn">PowerPoint</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-timeline">
+                            <div class="col-md-3 col-sm-4">
+                                <div id="timeline1" class="timeline">
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">
+                                            <span>2017</span>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h3 class="title">Undergraduate Student Researcher</h3>
+                                            <p class="description">
+                                                Summer research project with the Mathematical and Computational Biology for Undergraduates at the University of California, Irvine conducted in teams of two under guidance from two advisors on the development and analysis of stochastic models on the spread of Chlamydia trachomatis.
+                                            </p>
+                                            <div style="color: white; font-size: 10px;">
+                                                <p> ➢ Used stochastic processes and probability theory to generate a mathematical model </p>
+                                                <p> ➢ Programmed computers to store, process, and analyze data using MATLAB and Mathematica </p>
+                                                <p> ➢ Implemented algorithms to validate the model </p>
+                                                <p> ➢ Interpreted research findings and summarized data into reports using LaTeX </p>
+                                                <p> ➢ Collaborated successfully with team to complete research and presentation </p>
+                                                <p> ➢ Presented research at the 2017 Summer Undergraduate Capstone Conference held at Ohio State University </p>
+                                            </div>
+                                            <div class="experience-links">
+                                                <a href="https://mbi.osu.edu/video/player/?id=4316&title=Stochastic+Model+on+the+Spread+of+Chlamydia+Trachomatis" target="_blank" class="experience-link blue-btn">Presentation</a>
+                                                <a href="img/mcbu-report.pdf" target="_blank" class="experience-link green-btn">Report</a>
+                                                <a href="img/mcbu-ppt.pdf" target="_blank" class="experience-link red-btn">PowerPoint</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <div id="timeline2" class="timeline blue">
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">
+                                            <span>2018</span>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h3 class="title">Java Script</h3>
+                                            <p class="description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <div id="timeline3" class="timeline green">
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">
+                                            <span>2018</span>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h3 class="title">Web Designing</h3>
+                                            <p class="description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <div id="timeline4" class="timeline pink">
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">
+                                            <span>2018</span>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h3 class="title">Web Designing</h3>
+                                            <p class="description">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada tellus lorem, et condimentum neque commodo
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
