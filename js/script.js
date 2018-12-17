@@ -4,7 +4,7 @@ $(function() {
         imageSrc: 'img/parallax1.jpg',
         speed: 0.2
     });
-    $('#aboutme').parallax({
+    $('#about').parallax({
         imageSrc: 'img/parallax2.jpg',
         speed: 0.2
     });
@@ -56,8 +56,10 @@ $(function() {
         } // End if
     });
 
+    /* Calls the functions on appropriate hashchange events */
     $(window).on('hashchange', function(e) {
         let hash = window.location.hash
+        if (hash === "#skills") { revealSkillIcons(); }
         if (hash === "#experience") { revealTimeline(); }
     });
 
@@ -71,6 +73,7 @@ $(function() {
     setInterval("cycleImages('#vg-cycler')", 6000);
 });
 
+/* Adds crossfading on images */
 function cycleImages( cycler ) {
     var $active = $(cycler + ' .active');
     var $next = ($active.next().length > 0) ? $active.next() : $(cycler + ' img:first');
@@ -81,15 +84,22 @@ function cycleImages( cycler ) {
     });
 }
 
+/* Function that reveals skill icons in the Skills section on the hashchange event when hash changes to #skills */
+function revealSkillIcons() {
+    var time = 0;
+    $('.skill-icon').each(function() {
+        $(this).delay(time).fadeTo(300, 1);
+        time += 300; // Not incrememnting the delay causes each fadeTo function to execute at the same time
+    });
+}
+
+/* Function that reveals the timeline in Experience section on the hashchange event when hash changes to #experience */
 function revealTimeline() {
-    $('#timeline1').fadeIn(1000);
+    $('#timeline1').fadeTo(1000, 1);
     setTimeout(function(){
-        $('#timeline2').fadeIn(1000);
+        $('#timeline2').fadeTo(1000, 1);
     }, 1000)
     setTimeout(function(){
-        $('#timeline3').fadeIn(1000);
+        $('#timeline3').fadeTo(1000, 1);
     }, 2000)
-    setTimeout(function(){
-        $('#timeline4').fadeIn(1000);
-    }, 3000)
 }

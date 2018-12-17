@@ -1,3 +1,7 @@
+/* Navbar */
+.navbar {
+    opacity: 0.95;
+}
 /* Introduction Section */
 #intro {
     padding-top:100px;
@@ -5,24 +9,69 @@
     width: 100vw;
 }
 #profile {
-    width: 30%;
+    width: 80%;
     padding-bottom: 10px;
 }
 .myname {
     font-variant: small-caps;
-    font-size: 600%;
     color: white;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    font-size: 40px;
+    padding-top: 50px;
 }
 .desiredjob {
     font-variant: small-caps;
-    font-size: 200%;
     color: white;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    font-size: 18px;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .myname {
+        font-size: 60px;
+    }
+    .desiredjob {
+        font-size: 22px;
+    }
+} 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #profile {
+        width: 40%;
+    }
+    .myname {
+        font-size: 72px;
+    }
+    .desiredjob {
+        font-size: 28px;
+    }
+} 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #profile {
+        width: 40%;
+    }
+    .myname {
+        font-size: 88px;
+    }
+    .desiredjob {
+        font-size: 36px;
+    }
+} 
+@media screen and (min-width: 1200px) {
+    #profile {
+        width: 40%;
+    }
+    .myname {
+        font-size: 108px;
+        padding-top: 0px;
+    }
+    .desiredjob {
+        font-size: 44px;
+    }
 }
 
 /* Parallax effect */
 .parallax-mirror {
-    -webkit-filter: blur(1.75px) brightness(65%) contrast(90%);
-            filter: blur(1px) brightness(65%) contrast(90%);
+    -webkit-filter: blur(1.25px) brightness(65%) contrast(90%);
+            filter: blur(1.25px) brightness(65%) contrast(90%);
 }
 
 /* Images */
@@ -52,59 +101,46 @@ section {
 .centered-section {
     text-align: center;
 }
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .fill-section {
-        height: calc(200vh - 40px);
-        width: 100vw;
-    }
-} 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .fill-section {
-        height: calc(150vh - 40px);
-        width: 100vw;
-    }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .fill-section {
-        height: calc(100vh - 40px);
-        width: 100vw;
-    }
-}
-
 /* About Me Section */
-.aboutme-text {
+.about-text {
     font-size: 16px;
     font-weight: bold;
     color: white;
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 }
+@media screen and (min-width: 1200px) {
+    .about-text {
+        font-size: 20px;
+    }
+}
+
 
 /* Skills section */
-.skills-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    font-variant: small-caps;
-}
-.skills-text > p {
+.skills-row {
     padding-bottom: 20px;
+    text-align: center;
 }
 .skill-icon {
-    height: 10vh;
-    width: 10vw;
-    vertical-align: -30px;
-    padding-left: 25px;
-    padding-right: 25px;
+    height: 160px;
+    width: 160px;
+    -webkit-filter: brightness(1.25);
+            filter: brightness(1.25);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    opacity: 0;
 }
 .skill-icon:hover {
     cursor: pointer;
-    -webkit-filter: brightness(1.5);
-            filter: brightness(1.5);
-    transform: scale(1.5)
+    -webkit-filter: brightness(1.75);
+            filter: brightness(1.75);
+    transform: scale(1.6)
+}
+.skills-text {
+    font-size: 14px;
+    color: white;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -171,7 +207,6 @@ section {
     --color_1: #EA2027;
     --color_2: #1F5295;
     --color_3: #89b743;
-    --color_4: #e02a6d;
 }
 .main-timeline{ font-family: 'Niramit', sans-serif; }
 .main-timeline:after{
@@ -225,18 +260,22 @@ section {
 .main-timeline .inner-content{
     padding: 0 10px 10px 15px;
     border-left: 10px solid var(--color_1);
-    height: 55vh;
+    height: 550px;
 }
 .main-timeline .title{
-    font-size: 18px;
+    font-size: 28px;
     font-weight: 600;
     margin: 0 0 15px 0;
     text-align: center;
+    text-shadow: 0px 0px 2px #fff, -1px -1px #fff, 1px 1px #fff;
+
 }
 .main-timeline .description{
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
-    font-size: 12px;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    font-size: 15px;
+    font-style: italic;
 }
 
 /* Creates blue timeline piece */
@@ -249,7 +288,7 @@ section {
 }
 .main-timeline .timeline.blue .inner-content{ 
     border-left-color: var(--color_2); 
-    height: 55vh;
+    height: 550px;
 }
 
 /* Creates green timeline piece */
@@ -262,45 +301,41 @@ section {
 }
 .main-timeline .timeline.green .inner-content{ 
     border-left-color: var(--color_3);
-    height: 55vh;
-}
-
-/* Creates pink timeline piece */
-.main-timeline .timeline.pink .title{
-    color: var(--color_4);
-}
-.main-timeline .timeline.pink .timeline-year:after,
-.main-timeline .timeline.pink .timeline-year span{
-    background-color: var(--color_4);
-}
-.main-timeline .timeline.pink .inner-content{
-    border-left-color: var(--color_4);
-    height: 55vh;
+    height: 550px;
 }
 
 /* Responsive timeline */
 @media screen and (max-width:767px){
     .main-timeline .timeline{ margin: 0 0 15px; }
     .main-timeline .timeline-year:after{ width: 100%; }
+    .main-timeline .inner-content{ height: 100% }
 }
-.experience-link {
+.experience-link .btn{
     text-align: center;
     border-radius: 5px;
     color: #fff;
-    font-size: 10px;
-    padding: 10px 30px;
+    font-size: 12px;
+    padding: 10px 15px;
     text-decoration: none;
-    text-transform: capitalize;
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
+    padding-botton: 50px;
 }
 .experience-link:hover, .experience-link:link, .experience-link:visited  {
     color: white;
     text-decoration: none;
 }
-#timeline1, #timeline2, #timeline3, #timeline4 {
-    display: none;
+.job-resp {
+    color: white; 
+    font-size: 14px;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    background-color: rgba(0, 0, 0, 0.05);
+
 }
+ #timeline1, #timeline2, #timeline3 {
+    opacity: 0;
+}
+
 
 /* Hobbies Section */
 .bjj-header {
@@ -353,20 +388,3 @@ section {
     width: 300px;
 }
 #bjj-cycler img.active, #music-cycler img.active, #vg-cycler img.active {z-index:3;}
-
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
