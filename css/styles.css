@@ -2,14 +2,14 @@
 .navbar {
     opacity: 0.95;
 }
+
 /* Introduction Section */
 #intro {
-    padding-top:100px;
+    padding-top: 100px;
     height: 100vh;
-    width: 100vw;
 }
 #profile {
-    width: 80%;
+    width: 50%;
     padding-bottom: 10px;
 }
 .myname {
@@ -68,11 +68,12 @@
     }
 }
 
-/* Parallax effect */
+/* Add filters to the parallax images */
 .parallax-mirror {
     -webkit-filter: blur(1.25px) brightness(65%) contrast(90%);
             filter: blur(1.25px) brightness(65%) contrast(90%);
 }
+
 
 /* Images */
 img {
@@ -193,10 +194,21 @@ section {
 .carousel {
     position: relative;
 }
-.carousel-indicators {
-    /* position: absolute; */
-    bottom: -10px;
+.carousel-inner {
+    height: 100vh;
+    margin-bottom: 30px;
 }
+.carousel-indicators {
+    position: absolute;
+    margin-bottom: -30px;
+}
+ol.carousel-indicators li {
+    background: gray;
+
+}
+ ol.carousel-indicators li.active {
+    background: gold;
+ }
 
 
 /* Experience Section */
@@ -352,7 +364,7 @@ section {
     right: 0;
     margin: auto;
     height: 400px;
-    width: 475px;
+    width: 100%;
 }
 .music-header {
     color: green;
@@ -368,7 +380,7 @@ section {
     right: 0;
     margin: auto;
     height: 400px;
-    width: 350px;
+    width: 100%;
 }
 .vg-header {
     color: red;
@@ -376,7 +388,10 @@ section {
     text-shadow: 0px 0px 10px #fff, -.5px -.5px #fff, .5px .5px #fff;
     padding-bottom: 20px;
 }
-#bjj-cycler, #music-cycler #vg-cycler {position:relative;}
+#bjj-cycler, #music-cycler, #vg-cycler {
+    position:relative;
+    height: 400px;
+}
 #vg-cycler img {
     position: absolute;
     z-index: 1;
@@ -385,6 +400,11 @@ section {
     right: 0;
     margin: auto;
     height: 400px;
-    width: 300px;
+    width: 100%;
 }
 #bjj-cycler img.active, #music-cycler img.active, #vg-cycler img.active {z-index:3;}
+.hobbies-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}

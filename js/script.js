@@ -1,34 +1,7 @@
 $(function() {  
-    /* Enables parallax by creating a div with the .parallax-mirror class */
-    $('#intro').parallax({
-        imageSrc: 'img/parallax1.jpg',
-        speed: 0.2
-    });
-    $('#about').parallax({
-        imageSrc: 'img/parallax2.jpg',
-        speed: 0.2
-    });
-    $('#skills').parallax({
-        imageSrc: 'img/parallax3.png',
-        speed: 0.2
-    });
-    $('#education').parallax({
-        imageSrc: 'img/parallax4.jpg',
-        speed: 0.2
-    });
-    $('#projects').parallax({
-        imageSrc: 'img/parallax5.jpg',
-        speed: 0.2
-    });
-    $('#experience').parallax({
-        imageSrc: 'img/parallax6.jpg',
-        speed: 0.2
-    });
-    $('#hobbies').parallax({
-        imageSrc: 'img/parallax7.jpg',
-        speed: 0.2
-    });
-
+    /* Enables parallax by creating a div with the .parallax-mirror class  */
+    setParallaxImages();
+ 
     /* Updates the URL with appropriate hash code on scrollspy event */
     $(window).on('activate.bs.scrollspy', function(e) {
         history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
@@ -73,6 +46,39 @@ $(function() {
     setInterval("cycleImages('#vg-cycler')", 6000);
 });
 
+/* Adds the parallax images */
+function setParallaxImages() {
+    console.log("called")
+    $('#intro').parallax({
+        imageSrc: 'img/parallax1.jpg',
+        speed: 0.2
+    });
+    $('#about').parallax({
+        imageSrc: 'img/parallax2.jpg',
+        speed: 0.2
+    });
+    $('#skills').parallax({
+        imageSrc: 'img/parallax3.png',
+        speed: 0.2
+    });
+    $('#education').parallax({
+        imageSrc: 'img/parallax4.jpg',
+        speed: 0.2
+    });
+    $('#projects').parallax({
+        imageSrc: 'img/parallax5.jpg',
+        speed: 0.2
+    });
+    $('#experience').parallax({
+        imageSrc: 'img/parallax6.jpg',
+        speed: 0.2
+    });
+    $('#hobbies').parallax({
+        imageSrc: 'img/parallax7.jpg',
+        speed: 0.2
+    });
+}
+
 /* Adds crossfading on images */
 function cycleImages( cycler ) {
     var $active = $(cycler + ' .active');
@@ -98,8 +104,8 @@ function revealTimeline() {
     $('#timeline1').fadeTo(1000, 1);
     setTimeout(function(){
         $('#timeline2').fadeTo(1000, 1);
-    }, 1000)
+    }, 1000);
     setTimeout(function(){
         $('#timeline3').fadeTo(1000, 1);
-    }, 2000)
+    }, 2000);
 }
