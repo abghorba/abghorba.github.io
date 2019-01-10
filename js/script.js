@@ -1,7 +1,7 @@
 $(function() {  
     /* Enables parallax by creating a div with the .parallax-mirror class  */
     setParallaxImages();
- 
+
     /* Updates the URL with appropriate hash code on scrollspy event */
     $(window).on('activate.bs.scrollspy', function(e) {
         history.replaceState({}, "", $("a[href^='#']", e.target).attr("href"));
@@ -9,8 +9,13 @@ $(function() {
         $(window).trigger('hashchange')
     });
 
+    /* Enables smooth scrolling for scrolldown arrow in intro section */
+    $("#intro a").on('click', function(e) {
+        smoothScroll("#about");
+    });
+    
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
-    /* Enables smooth scrolling */
+    /* Enables smooth scrolling for navbar */
     $("#myNavbar a").on('click', function(e) {
 
         // Make sure this.hash has a value before overriding default behavior
@@ -21,11 +26,7 @@ $(function() {
           // Store hash
           let hash = this.hash;
     
-          // Using jQuery's animate() method to add smooth page scroll
-          $navbarHeight = $('.navbar').height()
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top - $navbarHeight,
-          }, 800);
+          smoothScroll(hash);
         } // End if
     });
 
@@ -46,9 +47,18 @@ $(function() {
     setInterval("cycleImages('#vg-cycler')", 6000);
 });
 
+
+/* Smooth scrolling */
+function smoothScroll(hash) {
+    // Using jQuery's animate() method to add smooth page scroll
+    $navbarHeight = $('.navbar').height()
+    $('html, body').animate({
+    scrollTop: $(hash).offset().top - $navbarHeight,
+    }, 800);
+}
+
 /* Adds the parallax images */
 function setParallaxImages() {
-    console.log("called")
     $('#intro').parallax({
         imageSrc: 'img/parallax1.jpg',
         speed: 0.2
@@ -57,24 +67,20 @@ function setParallaxImages() {
         imageSrc: 'img/parallax2.jpg',
         speed: 0.2
     });
-    $('#skills').parallax({
-        imageSrc: 'img/parallax3.png',
+    $('#experience').parallax({
+        imageSrc: 'img/parallax3.jpg',
         speed: 0.2
     });
-    $('#education').parallax({
-        imageSrc: 'img/parallax4.jpg',
+    $('#skills').parallax({
+        imageSrc: 'img/parallax4.png',
         speed: 0.2
     });
     $('#projects').parallax({
         imageSrc: 'img/parallax5.jpg',
         speed: 0.2
     });
-    $('#experience').parallax({
-        imageSrc: 'img/parallax6.jpg',
-        speed: 0.2
-    });
     $('#hobbies').parallax({
-        imageSrc: 'img/parallax7.jpg',
+        imageSrc: 'img/parallax6.jpg',
         speed: 0.2
     });
 }

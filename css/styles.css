@@ -67,6 +67,69 @@
         font-size: 44px;
     }
 }
+.scrolldown a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.scrolldown a:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+#intro a {
+    padding-top: 70px;
+}
+#intro a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -12px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
 
 /* Add filters to the parallax images */
 .parallax-mirror {
@@ -114,101 +177,6 @@ section {
         font-size: 20px;
     }
 }
-
-
-/* Skills section */
-.skills-row {
-    padding-bottom: 20px;
-    text-align: center;
-}
-.skill-icon {
-    height: 160px;
-    width: 160px;
-    -webkit-filter: brightness(1.25);
-            filter: brightness(1.25);
-    padding-top: 20px;
-    padding-bottom: 25px;
-    opacity: 0;
-}
-.skill-icon:hover {
-    cursor: pointer;
-    -webkit-filter: brightness(1.75);
-            filter: brightness(1.75);
-    transform: scale(1.6)
-}
-.skills-text {
-    font-size: 14px;
-    color: white;
-    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-/* Projects Section */
-.green-text { color: #178A27; }
-.blue-text { color: #1686C1; }
-.gray-text { color: #1686C1; }
-.green-btn { background: #178A27; }
-.green-btn:hover { background: #449D44; }
-.blue-btn { background: #1686C1; }
-.blue-btn:hover { background: #31B0D5; }
-.red-btn { background: #b33d19; }
-.red-btn:hover { background: rgb(230, 67, 61); }
-.project-content {
-    background: #F2F2F2;
-    padding-bottom: 25px;
-    opacity: 0.75;
-    border-style: solid;
-    border-color: royalblue;
-}
-.project-title {
-    padding: 0 20px;
-    text-align: center;
-    font-variant: small-caps; 
-}
-.project-description {
-    padding: 0 20px 25px;
-    text-align: left;
-    color: #333333;
-    margin-top: 15px;
-}
-.project-link {
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 30px;
-    text-decoration: none;
-    text-transform: capitalize;
-    -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-}
-.project-link:hover, .project-link:link, .project-link:visited  {
-  color: white;
-  text-decoration: none;
-}
-.item {
-    height: 78vh;
-    position: relative;
-}
-.carousel {
-    position: relative;
-}
-.carousel-inner {
-    height: 100vh;
-    margin-bottom: 30px;
-}
-.carousel-indicators {
-    position: absolute;
-    margin-bottom: -30px;
-}
-ol.carousel-indicators li {
-    background: gray;
-
-}
- ol.carousel-indicators li.active {
-    background: gold;
- }
 
 
 /* Experience Section */
@@ -331,7 +299,6 @@ ol.carousel-indicators li {
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
-    padding-botton: 50px;
 }
 .experience-link:hover, .experience-link:link, .experience-link:visited  {
     color: white;
@@ -347,6 +314,101 @@ ol.carousel-indicators li {
  #timeline1, #timeline2, #timeline3 {
     opacity: 0;
 }
+
+
+/* Skills section */
+.skills-row {
+    padding-bottom: 20px;
+    text-align: center;
+}
+.skill-icon {
+    height: 160px;
+    width: 160px;
+    -webkit-filter: brightness(1.25);
+            filter: brightness(1.25);
+    padding-top: 20px;
+    padding-bottom: 25px;
+    opacity: 0;
+}
+.skill-icon:hover {
+    cursor: pointer;
+    -webkit-filter: brightness(1.75);
+            filter: brightness(1.75);
+    transform: scale(1.6)
+}
+.skills-text {
+    font-size: 14px;
+    color: white;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* Projects Section */
+.green-text { color: #178A27; }
+.blue-text { color: #1686C1; }
+.gray-text { color: #1686C1; }
+.green-btn { background: #178A27; }
+.green-btn:hover { background: #449D44; }
+.blue-btn { background: #1686C1; }
+.blue-btn:hover { background: #31B0D5; }
+.red-btn { background: #b33d19; }
+.red-btn:hover { background: rgb(230, 67, 61); }
+.project-content {
+    background: #F2F2F2;
+    padding-bottom: 25px;
+    opacity: 0.75;
+    border-style: solid;
+    border-color: royalblue;
+}
+.project-title {
+    padding: 0 20px;
+    text-align: center;
+    font-variant: small-caps; 
+}
+.project-description {
+    padding: 0 20px 25px;
+    text-align: left;
+    color: #333333;
+    margin-top: 15px;
+}
+.project-link {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+.project-link:hover, .project-link:link, .project-link:visited  {
+  color: white;
+  text-decoration: none;
+}
+.item {
+    height: 78vh;
+    position: relative;
+}
+.carousel {
+    position: relative;
+}
+.carousel-inner {
+    height: 100vh;
+    margin-bottom: 30px;
+}
+.carousel-indicators {
+    position: absolute;
+    margin-bottom: -30px;
+}
+ol.carousel-indicators li {
+    background: gray;
+
+}
+ ol.carousel-indicators li.active {
+    background: gold;
+ }
 
 
 /* Hobbies Section */
