@@ -1,3 +1,5 @@
+const navbarHeight = 50;
+
 $(function() {  
     /* Enables parallax by creating a div with the .parallax-mirror class  */
     setParallaxImages();
@@ -13,7 +15,7 @@ $(function() {
     $("#intro a").on('click', function(e) {
         smoothScroll("#about");
     });
-    
+
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
     /* Enables smooth scrolling for navbar */
     $("#myNavbar a").on('click', function(e) {
@@ -51,9 +53,8 @@ $(function() {
 /* Smooth scrolling */
 function smoothScroll(hash) {
     // Using jQuery's animate() method to add smooth page scroll
-    $navbarHeight = $('.navbar').height()
     $('html, body').animate({
-    scrollTop: $(hash).offset().top - $navbarHeight,
+    scrollTop: $(hash).offset().top - navbarHeight,
     }, 800);
 }
 
