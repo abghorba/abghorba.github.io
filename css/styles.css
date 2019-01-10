@@ -6,7 +6,7 @@
 /* Introduction Section */
 #intro {
     padding-top: 100px;
-    height: 100vh;
+    padding-bottom: 150px;
 }
 #profile {
     width: 50%;
@@ -41,7 +41,7 @@
         font-size: 72px;
     }
     .desiredjob {
-        font-size: 28px;
+        font-size: 24px;
     }
 } 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -49,10 +49,10 @@
         width: 40%;
     }
     .myname {
-        font-size: 88px;
+        font-size: 82px;
     }
     .desiredjob {
-        font-size: 36px;
+        font-size: 28px;
     }
 } 
 @media screen and (min-width: 1200px) {
@@ -60,11 +60,11 @@
         width: 40%;
     }
     .myname {
-        font-size: 108px;
+        font-size: 96px;
         padding-top: 0px;
     }
     .desiredjob {
-        font-size: 44px;
+        font-size: 32px;
     }
 }
 .scrolldown a {
