@@ -1,4 +1,4 @@
-const navbarHeight = 50;
+var navbarHeight = 50;
 
 $(function() {  
     /* Enables parallax by creating a div with the .parallax-mirror class  */
