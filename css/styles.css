@@ -48,7 +48,6 @@
 
 /* Introduction Section */
 #intro {
-    padding-top: 100px;
     height: 100vh;
 }
 .welcome {
@@ -65,26 +64,6 @@
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
     font-size: calc(1em + 2vw);
 }
-/* @media screen and (min-width: 600px) and (max-width: 767px) {
-    .tagline {
-        font-size: 5vw;
-    }
-} 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    .tagline {
-        font-size: 5vw;
-    }
-} 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-    .tagline {
-        font-size: 5vw;
-    }
-} 
-@media screen and (min-width: 1200px) {
-    .tagline {
-        font-size: 5vw;
-    }
-} */
 .scrolldown a {
     position: absolute;
     bottom: 20px;
@@ -264,11 +243,18 @@ section {
 
 }
 .main-timeline .description{
-    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
     font-size: 15px;
     font-style: italic;
+}
+.main-timeline .description2{
+    color: #fff;
+    text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    font-size: 28px;
+    font-style: italic;
+    padding-top: 20px;
+    text-align: center;
 }
 
 /* Creates blue timeline piece */
@@ -303,8 +289,10 @@ section {
     .main-timeline .timeline-year:after{ width: 100%; }
     .main-timeline .inner-content{ height: 100% }
 }
-.experience-link .btn{
+.experience-link {
     text-align: center;
+}
+.experience-link .btn{
     border-radius: 5px;
     color: #fff;
     font-size: 12px;
@@ -321,11 +309,24 @@ section {
     color: white; 
     font-size: 14px;
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
-    background-color: rgba(0, 0, 0, 0.05);
-
 }
  #timeline1, #timeline2, #timeline3 {
     opacity: 0;
+}
+.uci {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.6; 
+    width: 90%;
+    padding-bottom: 10px;
+}
+.schoolpride {
+    color: blue;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px gold, -1px -1px gold, 1px 1px gold;
+    text-align: center;
 }
 
 

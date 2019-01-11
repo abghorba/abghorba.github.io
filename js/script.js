@@ -29,6 +29,11 @@ $(function() {
         smoothScroll("#about");
     });
 
+    /* Enables smooth scrolling for items in experience section */
+    $(".description a").on('click', function(e) {
+        smoothScroll($(this).attr("href"));
+    });
+
     /* Taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll */
     /* Enables smooth scrolling for navbar */
     $("#myNavbar a").on('click', function(e) {
