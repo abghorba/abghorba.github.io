@@ -2,6 +2,9 @@
 .navbar {
     opacity: 0.95;
 }
+.navbar-right > li {
+    font-size: 15px;
+}
 
 /* Scroll back to top arrow */
 #return-to-top {
@@ -47,6 +50,14 @@
 }
 
 /* Introduction Section */
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 #intro {
     height: 100vh;
 }
@@ -55,7 +66,6 @@
     color: white;
     text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
     font-size: calc(1em + 10vw);
-    padding-top: 50px;
     letter-spacing: 5px;
 }
 .tagline {
@@ -66,7 +76,7 @@
 }
 .scrolldown a {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     left: 50%;
     z-index: 2;
     display: inline-block;
@@ -89,8 +99,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-left: -12px;
     border-left: 4px solid #fff;
     border-bottom: 4px solid #fff;
@@ -232,7 +242,7 @@ section {
 .main-timeline .inner-content{
     padding: 0 10px 10px 15px;
     border-left: 10px solid var(--color_1);
-    height: 550px;
+    height: 600px;
 }
 .main-timeline .title{
     font-size: 28px;
@@ -267,7 +277,7 @@ section {
 }
 .main-timeline .timeline.blue .inner-content{ 
     border-left-color: var(--color_2); 
-    height: 550px;
+    height: 600px;
 }
 
 /* Creates green timeline piece */
@@ -280,7 +290,7 @@ section {
 }
 .main-timeline .timeline.green .inner-content{ 
     border-left-color: var(--color_3);
-    height: 550px;
+    height: 600px;
 }
 
 /* Responsive timeline */
@@ -409,8 +419,13 @@ section {
     position: relative;
 }
 .carousel-inner {
-    height: 100vh;
+    height: 83vh;
     margin-bottom: 30px;
+}
+@media screen and (max-width:767px){
+    .carousel-inner {
+        height: 78vh;
+    }
 }
 .carousel-indicators {
     position: absolute;
@@ -432,7 +447,7 @@ ol.carousel-indicators li {
     text-shadow: 0px 0px 10px #fff, -1px -1px #fff, 1px 1px #fff;
     padding-bottom: 20px;
 }
-#bjj-cycler img {
+#bjj-cycler img ,#music-cycler img ,#vg-cycler img {
     position: absolute;
     z-index:1;
     display: block;
@@ -440,23 +455,18 @@ ol.carousel-indicators li {
     right: 0;
     margin: auto;
     height: 400px;
-    width: 100%;
+    width: 70%;
+}
+@media screen and (max-width: 768px) {
+    #bjj-cycler img ,#music-cycler img ,#vg-cycler img {
+        width: 90%;
+    }
 }
 .music-header {
     color: green;
     font-variant: small-caps;
     text-shadow: 0px 0px 10px #fff, -.5px -.5px #fff, .5px .5px #fff;
     padding-bottom: 20px;
-}
-#music-cycler img {
-    position: absolute;
-    z-index: 1;
-    display: block;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 400px;
-    width: 100%;
 }
 .vg-header {
     color: red;
@@ -467,16 +477,6 @@ ol.carousel-indicators li {
 #bjj-cycler, #music-cycler, #vg-cycler {
     position:relative;
     height: 400px;
-}
-#vg-cycler img {
-    position: absolute;
-    z-index: 1;
-    display: block;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 400px;
-    width: 100%;
 }
 #bjj-cycler img.active, #music-cycler img.active, #vg-cycler img.active {z-index:3;}
 .hobbies-text {
