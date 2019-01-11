@@ -86,16 +86,17 @@ function setParallaxImages() {
         imageSrc: 'img/parallax2.jpg'
     });
     $('#experience').parallax({
-        imageSrc: 'img/parallax3.jpg',
+        imageSrc: 'img/parallax3.jpg'
     });
     $('#skills').parallax({
-        imageSrc: 'img/parallax4.png',
+        imageSrc: 'img/parallax4.png'
     });
     $('#projects').parallax({
-        imageSrc: 'img/parallax5.jpg',
+        imageSrc: 'img/parallax5.jpg'
+        
     });
     $('#hobbies').parallax({
-        imageSrc: 'img/parallax6.jpg',
+        imageSrc: 'img/parallax6.jpg'
     });
 }
 
